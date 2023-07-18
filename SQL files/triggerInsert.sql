@@ -1,11 +1,11 @@
 
--- Trigger cho vi?c thêm phi?u thuê
+-- Trigger cho vi?c thÃªm phi?u thuÃª
 CREATE TRIGGER Trg_InsertPhieuThue
 ON PhongTT
 AFTER INSERT
 AS
 BEGIN
-    -- C?p nh?t tr?ng thái phòng thành "?ã thuê" cho các mã phòng trong phi?u thuê v?a ???c thêm
+    -- C?p nh?t tr?ng thÃ¡i phÃ²ng thÃ nh "?Ã£ thuÃª" cho cÃ¡c mÃ£ phÃ²ng trong phi?u thuÃª v?a ???c thÃªm
     UPDATE PhongKS
     SET TinhtrangP = 'Da thue'
     FROM PhongKS, inserted, PhieuThue
